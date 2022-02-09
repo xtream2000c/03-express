@@ -1,7 +1,7 @@
 
 const express = require('express') //Requiere express
 const app = express() //Variable para disponer de todas las variables de Express
-const port = 3000 //Puerto de escucha
+const port = process.env.PORT || 3000 //Puerto de escucha
 
 //Motor de plantillas
 app.set('view engine', 'ejs');
