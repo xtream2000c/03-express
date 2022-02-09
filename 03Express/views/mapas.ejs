@@ -1,0 +1,42 @@
+<%- include("template/cabecera" , {tituloWeb:"Administracion de mapas"} )%>
+    
+<div class="container">
+    
+    <h1>Mapas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id Mapa</th>
+                <th>Nombre del mapa</th>
+                <th>Tipo de mapa</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <% if (arrayMapas.length > 0) { %>
+                
+                <% arrayMapas.forEach(mapa => { %>
+                
+                    <tr>
+                        <td scope="row"> <%=mapa.id%></td>
+                        <td> <%=mapa.nombre%></td>
+                        <td><%=mapa.tipo%></td>
+                        <td><%=mapa.descripcion%></td>
+                        <td>Acciones</td>
+                    </tr>
+                
+
+                <% }) %>
+
+            <% } %>
+
+        </tbody>
+    </table>
+
+</div>
+
+
+<%- include("template/footer")%>
