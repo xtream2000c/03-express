@@ -2,7 +2,7 @@
   "name": "03Express",
   "version": "1.0.0",
   "description": "",
-  "main": "views/index.ejs",
+  "main": "01-express.js",
   "scripts": {
     "start": "node 01-express"
   },
