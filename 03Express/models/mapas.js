@@ -10,5 +10,6 @@ const mapasSchema = new Schema({
 //Creanis ek modelo
 
 const Mapas = mongoose.model("BDCSGO", mapasSchema, "Mapas");
+
 module.exports = Mapas;
 
