@@ -1,6 +1,13 @@
 
 const express = require('express') //Requiere express
+const bodyParser = require("body-parser");
 const app = express() //Variable para disponer de todas las variables de Express
+
+//parse aplication/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended : false}))
+
+//parse aplication/json
+app.use(bodyParser.json());
 
 require("dotenv").config();
 
