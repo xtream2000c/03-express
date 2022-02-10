@@ -21,4 +21,17 @@ router.get("/crear", (req,res) =>{
     res.render("crear")//Nueva vista crear
 })
 
+router.post('/', async (req, res) => {
+    const body = req.body //Gracias al body parser, de esta forma
+    //podremos recuperar todo lo que viene del body
+    console.log(body) //Para comprobarlo por pantalla
+    try {
+        const MapasDB = new Mapas(body) //Creamos un nuevo Pokemon, gracias al modelo
+        await MapasDB.save() //Lo guardamos con .save(), gracias a Mongoose
+        res.redirect('/mapas') //Volvemos al listado
+    } catch (error) {
+        console.log('error', error)
+    }
+})
+
 module.exports = router;
