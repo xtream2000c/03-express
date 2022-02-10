@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         //con respecto al arrayPokemon que tenemos EN LA VISTA
         const arrayMapasDB = await Mapas.find();
         console.log(arrayMapasDB);
-        res.render("Mapas", { 
+        res.render("mapas", { 
             arrayMapas: arrayMapasDB
         })
     } catch (error) {
