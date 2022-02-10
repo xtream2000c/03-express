@@ -1,17 +1,18 @@
 
 const express = require('express') //Requiere express
 const app = express() //Variable para disponer de todas las variables de Express
+
+require("dotenv").config();
+
 const port = process.env.PORT || 3000 //Puerto de escucha
+
 
 //Conexión a base de datos
 const mongoose = require('mongoose');
 //Variables que tendremos siempre:
 //Lo correcto será declararlas EN VARIABLES DE ENTORNO
 //para que nadie vea directamente nuestras credenciales
-const user = 'Carlos';
-const password = 'HhhbmYS76s31ZM7i';
-const dbname = 'Mapas';
-const uri = `mongodb+srv://${user}:${password}@cluster0.ojxco.mongodb.net/${dbname}?retryWrites=true&w=majority`; //URL de conexión, que completaremos luego
+const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.ojxco.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`; //URL de conexión, que completaremos luego
 mongoose.connect(uri,
   { useNewUrlParser: true, useUnifiedTopology: true }
 ).then(() => console.log('Base de datos conectada'))
