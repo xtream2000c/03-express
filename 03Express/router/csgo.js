@@ -16,4 +16,9 @@ router.get('/', async (req, res) => {
         console.error(error)
     }
 })
+
+router.get("/crear", (req,res) =>{
+    res.render("crear")//Nueva vista crear
+})
+
 module.exports = router;
