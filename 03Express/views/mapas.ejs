@@ -10,10 +10,9 @@
 
         <thead>
             <tr>
-                <th>id Mapa</th>
                 <th>Nombre del mapa</th>
                 <th>Tipo de mapa</th>
-                <th>Descripcion</th>
+                <th class="d-none d-sm-table-cell">Descripcion</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -24,10 +23,9 @@
                 <% arrayMapas.forEach(mapa => { %>
                 
                     <tr>
-                        <td scope="row"> <%=mapa.id%></td>
                         <td> <%=mapa.nombre%></td>
                         <td><%=mapa.tipo%></td>
-                        <td><%=mapa.descripcion%></td>
+                        <td class="d-none d-sm-table-cell"><%=mapa.descripcion%></td>
                         <td><a  class="btn btn-warning btn-block" href="mapas/<%= mapa.id %>">Detalles</a></td>
                     </tr>
                 

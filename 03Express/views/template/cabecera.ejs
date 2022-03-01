@@ -1,17 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <title><%= tituloWeb %></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.0.2 -->
+    <!-- Bootstrap v5.0.2 -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.bundle.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <!--FontAwesomes-->
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+
 
 
   </head>
-  <body>
-      
+  <body class="d-flex flex-column h-100">
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand m-0 p-0" href="/"><img src="/media/csgo.png" height="36" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linksNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
     
+          <div class="collapse navbar-collapse" id="linksNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link " href="/mapas" id="mapas">Mapas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/armas" id="armas">Armas</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    </header>

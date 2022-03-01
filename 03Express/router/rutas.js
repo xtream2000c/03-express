@@ -9,7 +9,7 @@ const router = express.Router();
 
 //Por peticion de cliente GET
 router.get('/', (req, res) => { //Usamos funcion flecha para evitar funciones innecesarias OBLIGATORIO req y res, '/' es el directorio en que va a buscar (Localhost)
-    res.render('index',{titulo:'Este es un titulo dinamico'}) 
+    res.render('index',{titulo:'Inicio'}) 
   })
   
 router.get('/contacto', (req, res) => { // usamos /contacto para crear una nueva ruta

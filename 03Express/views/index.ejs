@@ -1,3 +1,110 @@
 <%- include("template/cabecera" , {tituloWeb:"inicio"} )%>
     <h1><%= titulo %></h1>
+
+    <h5> Bienvenidos a nuestra pagina de CSGO donde guardamos la informacion de los mapas y armas del juego. </h5>
+
+    <div class="container justify-content-center mt-3">
+        <div class="row">
+            <div class="col mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/1.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Inferno</h5>
+                      <p class="card-text">El techo de columnas</p>
+                      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inferno">Mas info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/2.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Dust 2</h5>
+                      <p class="card-text">Black hole?</p>
+                      <a  data-bs-toggle="modal" data-bs-target="#dust2" class="btn btn-primary">Mas info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/3.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Mirage</h5>
+                      <p class="card-text">One way en ventana</p>
+                      <a  data-bs-toggle="modal" data-bs-target="#mirage" class="btn btn-primary">Mas info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="inferno">
+        <div class="modal-dialog">
+          <div class="modal-content rounded-6 shadow">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">El mejor spot de corta</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+                <img src="images/1.jpg" class="w-100">
+              <p>No te puedes subir solo pero si al inicio de partida te sube un compañero es el mejor spot para cubrir corta, pero cuidado porque te pueden disparar a trave de la ventana.</p>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+              <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="dust2">
+        <div class="modal-dialog">
+          <div class="modal-content rounded-6 shadow">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">Todo lo que entra no sale</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+                <img src="images/4.jpg" class="w-100">
+              <p>En una IEM major la bomba se perdio por culpa de un fallo en el mapa.</p>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+              <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="mirage">
+        <div class="modal-dialog">
+          <div class="modal-content rounded-6 shadow">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">Un humo con el que no se te ve</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+                <img src="images/5.jpg" class="w-100">
+              <p>Lanzando un humo desde este spot, tus enemigos T no te podran ver cuando defiendas medio</p>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+              <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" tabindex="-1" id="cs-s">
+        <div class="modal-dialog">
+          <div class="modal-content rounded-6 shadow">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">CounterStrike-Source</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-0">
+                <img src="images/6.jpg" class="w-100">
+              <p>Esta es la antigua version del juego, ya no hay noticias para este juego</p>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+              <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 <%- include("template/footer")%>

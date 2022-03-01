@@ -33,8 +33,8 @@ app.set('views', __dirname+'/views');
 
 //llamadas a las rutas:
 app.use("/", require("./router/rutas"));
-app.use("/mapas", require("./router/csgo"));
-
+app.use("/mapas", require("./router/mapasR"));
+app.use("/armas", require("./router/armasR"));
 //***********************Ruta para ficheros estaticos*************************
 app.use(express.static(__dirname+'/public'));
 

@@ -1,0 +1,43 @@
+<%- include("template/cabecera" , {tituloWeb:"Administracion de armas"} )%>
+    
+<div class="container">
+    
+    <h1>Armas</h1>
+
+    <a class="btn btn-success btn-block my-4" href="/armas/crearArma">Crear un nuevo arma</a>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Nombre del arma</th>
+                <th>Tipo de arma</th>
+                <th class="d-none d-sm-table-cell">Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <% if (arrayArmas.length > 0) { %>
+                
+                <% arrayArmas.forEach(arma => { %>
+                
+                    <tr>
+                        <td> <%=arma.nombre%></td>
+                        <td><%=arma.tipo%></td>
+                        <td class="d-none d-sm-table-cell"><%=arma.descripcion%></td>
+                        <td><a  class="btn btn-warning btn-block" href="armas/<%= arma.id %>">Detalles</a></td>
+                    </tr>
+                
+
+                <% }) %>
+
+            <% } %>
+
+        </tbody>
+    </table>
+
+</div>
+
+
+<%- include("template/footer")%>
