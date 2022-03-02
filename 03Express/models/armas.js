@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const mapasSchema = new Schema({
+const armasSchema = new Schema({
     nombre : String,
     tipo : String,
     descripcion : String
@@ -9,7 +9,7 @@ const mapasSchema = new Schema({
 
 //Creamos el modelo
 
-const Armas = mongoose.model("Armas", mapasSchema, "Armas");
+const Armas = mongoose.model("Armas", armasSchema, "Armas");
 
 module.exports = Armas;
 

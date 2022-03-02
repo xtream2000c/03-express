@@ -1,0 +1,25 @@
+<%- include("template/cabecera", {tituloWeb: "Iniciar Sesión"}) %> 
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Iniciar Sesion</h1>
+                <form action="/inicioSesion" class="my-2" method="POST">
+                    <input type="text" placeholder="Usuario" class="form-control my-2" name="username">
+                    <input type="password" placeholder="Contraseña" class="form-control my-2" name="password">
+                    <div class="row ">
+                        <div class="col-6 text-center">
+                            <button type="submit" class="btn btn-dark btn-block">
+                                Enviar
+                            </button>
+                        </div>
+                        <div class="col-6 text-center">
+                            <a href="/registro">Registrarse</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<%- include("template/footer")%>

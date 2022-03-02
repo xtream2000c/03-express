@@ -1,0 +1,42 @@
+<%- include("template/cabecera" , {tituloWeb:"Inicio Sesión"} )%>
+    
+    <% if (error) { %>
+        <div class="m-2">
+
+        <h2>Error</h2>
+
+        <%= mensaje %> 
+        
+            <a href="/" class="btn btn-dark my-2 m-2">
+                Volver a inicio
+            </a>
+        </div>
+
+    <% } %>
+
+    <% if (!error) {  %>
+
+        <div class="m-2">
+
+            <h2> <%= mensaje %> </h2>
+
+            <a href="/" class="btn btn-dark m-2">
+                Volver a inicio
+            </a>
+        </div>
+
+        <script>
+
+            var usuariojson = {usuario : '<%= usuario %>', Contraseña : '<%= contraseña %>'}
+
+            console.log(usuariojson);
+            
+            sessionStorage.setItem("usuario", JSON.stringify(usuariojson));
+    
+        </script>
+        
+    <% } %>
+
+    
+
+<%- include("template/footer")%>

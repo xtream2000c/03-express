@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/fontawesome/css/all.css">
 
 
-
   </head>
   <body class="d-flex flex-column h-100">
 
@@ -27,15 +26,52 @@
     
           <div class="collapse navbar-collapse" id="linksNav">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link " href="/mapas" id="mapas">Mapas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="/armas" id="armas">Armas</a>
-              </li>
+              <div id="iniciar" class="">
+                <li class="nav-item">
+                  <a class="nav-link" href="/login" id="mapas">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="/registro" id="armas">Registrarse</a>
+                </li>
+              </div>
+              <div  id="iniciado">
+                <li class="nav-item ">
+                  <a class="nav-link " href="" id="cerrarSesion" onclick="cerrarSesion()">Cerrar sesión</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="/mapas" id="mapas">Mapas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="/armas" id="armas">Armas</a>
+                </li>
+              </div>
             </ul>
             
           </div>
         </div>
       </nav>
     </header>
+
+    <script>
+
+      var usuario = sessionStorage.getItem("usuario");
+
+      var iniciar = document.getElementById("iniciar");
+      var iniciado = document.getElementById("iniciado");
+
+      if(usuario){
+
+        iniciar.className = "d-none";
+        iniciado.className= "d-flex flex-column flex-md-row";
+
+      }else{
+        iniciado.className = "d-none";
+        iniciar.className= "d-flex flex-column flex-md-row";
+      }
+
+      function cerrarSesion(){
+        sessionStorage.removeItem("usuario");
+        location.reload;
+      }
+
+    </script>

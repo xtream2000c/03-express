@@ -35,6 +35,8 @@ app.set('views', __dirname+'/views');
 app.use("/", require("./router/rutas"));
 app.use("/mapas", require("./router/mapasR"));
 app.use("/armas", require("./router/armasR"));
+app.use("/", require("./router/userR"));
+
 //***********************Ruta para ficheros estaticos*************************
 app.use(express.static(__dirname+'/public'));
 
